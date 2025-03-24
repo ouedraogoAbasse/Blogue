@@ -36,24 +36,27 @@
     }
 
     /* Textes dynamiques responsives */
-    #dynamicText, #dynamicText2 {
+    #dynamicText {
       position: absolute;
+      top: 40%;
       left: 50%;
       transform: translateX(-50%);
       width: 90%;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
       padding: 10px;
-    }
-
-    #dynamicText {
-      top: 40%;
-      font-size: clamp(1.5rem, 4vw, 2.5rem); /* Taille responsive */
       animation: circularMotion 15s linear infinite;
     }
 
     #dynamicText2 {
+      position: absolute;
       top: 60%;
-      font-size: clamp(1rem, 3vw, 1.8rem); /* Taille responsive */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      font-size: clamp(1rem, 3vw, 1.8rem);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      padding: 10px;
       animation: circularMotion2 18s linear infinite;
     }
 
@@ -76,15 +79,9 @@
       }
     }
 
-    /* Section principale responsive */
-    .section {
-      padding: 2rem 1rem;
-      text-align: center;
-    }
+    /* Section principale (masquée car le texte est déjà animé) */
     .section h1 {
-      font-size: clamp(1.2rem, 3vw, 1.8rem);
-      margin: 0 auto;
-      max-width: 800px;
+      display: none;
     }
 
     /* Media Queries pour ajustements spécifiques */
@@ -140,10 +137,12 @@
     <div class="container-fluid dynamic-container px-0">
       <img src="/WhatsApp Image 2025-03-12 at 12.46.20.jpeg" class="img-fluid" alt="Aicha Bougma">
       <h1 id="dynamicText">Aicha Bougma</h1>
+      <!-- Le deuxième texte sera ajouté dynamiquement par JS -->
     </div>
   </header>
 
   <main>
+    <!-- Section masquée (le texte est utilisé pour l'animation) -->
     <section class="section bg-light">
       <h1>Je m'appelle Aicha BOUGMA et étudiante en deuxième année de licence à l'UFR/SJP de l'université Thomas Sankara.</h1>
     </section>
@@ -159,19 +158,17 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
-  <!-- Script JavaScript adapté -->
+  <!-- Script JavaScript optimisé -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const mainH1 = document.querySelector("main .section h1");
-      if (mainH1 && !document.getElementById("dynamicText2")) {
+      const dynamicContainer = document.querySelector(".dynamic-container");
+      
+      if (mainH1 && dynamicContainer && !document.getElementById("dynamicText2")) {
         const dynamicClone = mainH1.cloneNode(true);
         dynamicClone.id = "dynamicText2";
-        dynamicClone.style.display = "block"; // Assure la visibilité
-        
-        const dynamicContainer = document.querySelector(".dynamic-container");
-        if (dynamicContainer) {
-          dynamicContainer.appendChild(dynamicClone);
-        }
+        dynamicClone.style.display = "block"; // Force l'affichage
+        dynamicContainer.appendChild(dynamicClone);
       }
     });
   </script>
