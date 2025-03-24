@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences - Droit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Animation pour les barres de progression */
+        @keyframes progressBar {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        .progress-bar {
+            animation: progressBar 2s ease-in-out;
+        }
+
+        /* Effet de survol sur les cartes */
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        /* Timeline */
+        .timeline {
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin: 20px 0;
+        }
+
+        .timeline-content {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item::before {
+            content: '';
+            background: #007bff;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 15px;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="/index.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="acceuil.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cursus scolaire.html">Cursus Scolaire</a></li>
+                        <li class="nav-item"><a class="nav-link" href="preferences.html">Préférences</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="competences.html">Compétences</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenu de la page -->
+    <main class="container mt-5 pt-5">
+        <h1 class="text-center mt-4">Mes Compétences en Droit</h1>
+        <p class="text-center text-muted">Voici un aperçu de mes compétences techniques et interpersonnelles dans le domaine juridique.</p>
+
+        <!-- Compétences techniques -->
+        <section class="mt-4">
+            <h3><i class="bi bi-book"></i> Compétences Techniques</h3>
+            <div class="mt-3">
+                <label>Connaissance des Lois et Régulations</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 90%;">90%</div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <label>Analyse Juridique</label>
+                <div class="progress">
+                    <div class="progress-bar bg-info" style="width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <label>Rédaction Juridique</label>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" style="width: 75%;">75%</div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <label>Recherche Juridique</label>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" style="width: 70%;">70%</div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <label>Argumentation et Plaidoirie</label>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" style="width: 85%;">85%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compétences interpersonnelles -->
+        <section class="mt-5">
+            <h3><i class="bi bi-people"></i> Compétences Interpersonnelles</h3>
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body text-center">
+                            <i class="bi bi-chat-dots fs-1 text-primary"></i>
+                            <h5 class="card-title mt-2">Communication</h5>
+                            <p class="card-text">Capacité à expliquer clairement des idées techniques et juridiques.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body text-center">
+                            <i class="bi bi-lightbulb fs-1 text-warning"></i>
+                            <h5 class="card-title mt-2">Esprit Critique</h5>
+                            <p class="card-text">Analyser et évaluer des cas juridiques sous plusieurs angles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body text-center">
+                            <i class="bi bi-person-check fs-1 text-success"></i>
+                            <h5 class="card-title mt-2">Gestion des Conflits</h5>
+                            <p class="card-text">Aptitude à gérer des litiges et à trouver des solutions alternatives.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Outils maîtrisés -->
+        <section class="mt-5">
+            <h3><i class="bi bi-tools"></i> Outils Juridiques</h3>
+            <div class="mt-3">
+                <span class="badge bg-dark">Jurisprudence</span>
+                <span class="badge bg-primary">LexisNexis</span>
+                <span class="badge bg-danger">Westlaw</span>
+                <span class="badge bg-info">Droit Pénal</span>
+                <span class="badge bg-success">Droit Civil</span>
+            </div>
+        </section>
+
+        <!-- Timeline des expériences -->
+        <section class="mt-5">
+            <h3>Mon Parcours Juridique</h3>
+            <ul class="timeline">
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h5>2023 - Stage en Cabinet d'Avocats</h5>
+                        <p>Assistance dans la préparation de dossiers juridiques et dans les recherches de jurisprudence.</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h5>2022 - Cours de Droit Pénal</h5>
+                        <p>Étude des procédures pénales et des droits de la défense.</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-content">
+                        <h5>2021 - Initiation au Droit Civil</h5>
+                        <p>Apprentissage des règles de responsabilité civile et des contrats.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"></script>
+</body>
+</html>

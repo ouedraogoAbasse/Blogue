@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Préférences</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+        header {
+          background-color: bisque;
+          background-size: cover;
+          text-align: center;
+          
+          
+        }
+        
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+        .b-example-divider {
+          width: 100%;
+          height: 3rem;
+          background-color:white ;
+          border: solid rgba(0, 0, 0, .15);
+          border-width: 1px 0;
+          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+        .b-example-vr {
+          flex-shrink: 0;
+          width: 1.5rem;
+          height: 100vh;
+        }
+        .bi {
+          vertical-align: -.125em;
+          fill: currentColor;
+        }
+        .nav-scroller {
+          position: relative;
+          z-index: 2;
+          height: 2.75rem;
+          overflow-y: hidden;
+        }
+        .nav-scroller .nav {
+          display: flex;
+          flex-wrap: nowrap;
+          padding-bottom: 1rem;
+          margin-top: -1px;
+          overflow-x: auto;
+          text-align: center;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+          text-align: center;
+        }
+        .btn-bd-primary {
+          --bd-violet-bg: #712cf9;
+          --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+          --bs-btn-font-weight: 600;
+          --bs-btn-color: var(--bs-white);
+          --bs-btn-bg: var(--bd-violet-bg);
+          --bs-btn-border-color: var(--bd-violet-bg);
+          --bs-btn-hover-color: var(--bs-white);
+          --bs-btn-hover-bg: #6528e0;
+          --bs-btn-hover-border-color: #6528e0;
+          --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+          --bs-btn-active-color: var(--bs-btn-hover-color);
+          --bs-btn-active-bg: #5a23c8;
+          --bs-btn-active-border-color: #5a23c8;
+        }
+        footer{
+          background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <h1 text-align="center"; style="color: blue;">Mes Hobbies</h1>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="/index.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cursus scolaire.html">Cursus Scolaire</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="preferences.html">Préférences</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Competences.html">Compétences</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenu de la page -->
+    <main class="container mt-5 pt-5">
+        <h1 class="text-center mt-4">Mes Préférences</h1>
+        <p class="text-center text-muted">Découvrez mes choix technologiques et mes passions.</p>
+
+        <!-- Préférences technologiques -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h3><i class="bi bi-code-slash"></i> Langages de programmation</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">C++</li>
+                    <li class="list-group-item">C#</li>
+                    <li class="list-group-item">Java</li>
+                    <li class="list-group-item">JavaScript</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3><i class="bi bi-layers"></i> Frameworks & Outils</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">laravel</li>
+                    <li class="list-group-item">React.js</li>
+                    <li class="list-group-item">Bootstrap</li>
+                    <li class="list-group-item">Uiverse</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Systèmes d'exploitation & Éditeurs -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h3><i class="bi bi-windows"></i> Systèmes d'exploitation</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Linux (Ubuntu, Debian)</li>
+                    <li class="list-group-item">Windows 10/11</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3><i class="bi bi-terminal"></i> Éditeurs et Environnements</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">NetBeans</li>
+                    <li class="list-group-item">Visual Studio Code</li>
+                    <li class="list-group-item">Eclipse</li>
+                    <li class="list-group-item">edit plus</li>
+                    <li class="list-group-item">code block</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Loisirs & Centres d'intérêt -->
+        <div class="row mt-5">
+            <h2 class="text-center"><i class="bi bi-heart"></i> Mes Centres d'Intérêt</h2>
+            <div class="col-md-4 text-center">
+                <i class="bi bi-controller fs-1 text-primary"></i>
+                <div class="card shadow">
+                    <img src="./full-shot-smiley-girl-playing-videogame.jpg" class="card-img-top" alt="École">
+                    <div class="card-body">
+                <h4>Jeux vidéo</h4>
+                <p>Passionné par les jeux de stratégie et de rôle.</p>
+                <p>ensuite je prefere les jeux comme ps4 et plus precisement ce qui relate du football</p>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="bi bi-camera fs-1 text-success"></i>
+                <div class="card shadow">
+                    <img src="./portrait-smiling-afro-american-guy-leather-jacket.jpg" class="card-img-top" alt="École">
+                    <div class="card-body">
+                <h4>Photographie</h4>
+                <p>Amateur de paysages et de portraits artistiques.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="bi bi-book fs-1 text-danger"></i>
+                <div class="card shadow">
+                    <img src="./heureux-jeunes-etudiants-universitaires-qui-etudient-livres-dans-bibliotheque_216356-2117.jpg" class="card-img-top" alt="École">
+                    <div class="card-body">
+                <h4>Lecture</h4>
+                <p>Intéressé par la science-fiction et les romans technologiques.</p>
+                <p>j'aime aussi suivre l'avancee de la technologies .</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- Football--->
+        <div class="row mt-5">
+            <h2 class="text-center"><i class="bi bi-heart"></i> Football</h2>
+            <div class="card shadow">
+                <video controls width="1200" height="640" poster="./concept-jeu-football_23-2151043831.jpg">
+                    <source src="./6481763_Child_Children_3840x2160.mp4" type="video/mp4">
+                  </video>
+                  
+                <div class="card-body">
+                <h4>Jeux vidéo</h4>
+                <p>Passionné par les jeux de stratégie et de rôle.</p>
+                <p>ensuite je prefere les jeux comme ps4 et plus precisement ce qui relate du football</p>
+                </div>
+                </div>
+    </main>
+    <footer>
+        @ mon blog Personnel 2025
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"></script>
+</body>
+</html>

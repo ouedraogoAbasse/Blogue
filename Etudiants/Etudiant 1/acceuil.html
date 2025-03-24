@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aicha Bgm</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Votre fichier CSS personnalisé (optionnel) -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Conteneur relatif pour positionner le texte sur l'image */
+    .dynamic-container {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    .dynamic-container img {
+      width: 100%;
+      height: auto;
+    }
+    /* Premier texte dynamique */
+    #dynamicText {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      animation: circularMotion 10s linear infinite;
+    }
+    @keyframes circularMotion {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg);
+      }
+    }
+    /* Animation pour le deuxième texte dynamique */
+    #dynamicText2 {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      color: white;
+      animation: circularMotion2 12s linear infinite;
+    }
+    @keyframes circularMotion2 {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- En-tête -->
+  <header class="bg-dark text-white py-4">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="/index.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="acceuil.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="cursus scolaire.html">Cursus Scolaire</a></li>
+            <li class="nav-item"><a class="nav-link" href="Preferences.html">Preferences</a></li>
+            <li class="nav-item"><a class="nav-link" href="Competences.html">Competences</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> 
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Conteneur avec image et premier texte dynamique -->
+    <div class="container dynamic-container">
+      <img src="/WhatsApp Image 2025-03-12 at 12.46.20.jpeg" class="img-fluid" alt="Étudiant 1">
+      <h1 id="dynamicText">Aicha Bougma</h1>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="section">
+        <h1 id="dynamicText">Je m'appelle Aicha BOUGMA et étudiante en deuxième année de licence à l'UFR/SJP de l'université Thomas Sankara.</h1>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2023 aicha BGM. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (optionnel, pour les fonctionnalités interactives) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Script JavaScript pour éviter les doublons du texte dynamique -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Vérifie si le texte dynamique existe déjà pour éviter les doublons
+      if (!document.getElementById("dynamicText2")) {
+        // Sélectionne le deuxième h1 dans la section principale
+        const mainH1 = document.querySelector("main .section h1");
+        if (mainH1) {
+          // Clone le h1 pour ne pas modifier l'original
+          const dynamicClone = mainH1.cloneNode(true);
+          dynamicClone.id = "dynamicText2";
+
+          // Ajoute le clone dans le conteneur dynamique de l'image
+          const dynamicContainer = document.querySelector(".dynamic-container");
+          if (dynamicContainer) {
+            dynamicContainer.appendChild(dynamicClone);
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+/* Réinitialisation des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    background-image: url(./Etudiants/istockphoto-1401292297-1024x1024.jpg);
+    background-size: cover;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;    
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* En-tête */
+header {
+    background-image: url(Etudiants/istockphoto-1379570038-612x612.jpg);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* Section Hero */
+.hero {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Liste des étudiants */
+.students {
+    padding: 40px 0;
+}
+
+.students h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.student-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.student-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.student-card:hover {
+    transform: scale(1.05);
+}
+
+.student-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.student-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.student-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.student-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.student-card a:hover {
+    background-color: #0056b3;
+}
+
+/* Sections des pages personnelles */
+.section {
+    padding: 40px 0;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.section ul {
+    list-style: inside;
+    margin-bottom: 20px;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+/* Formulaire de contact */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Pied de page */
+footer {
+    background-image: url(./Etudiants/Etudiant\ 3/istockphoto-996693064-612x612);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .student-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .student-card {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(./free-photo-of-serene-alpine-cabin-in-veneto-italy.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding-top: 120px; /* Ajoute un padding-top pour compenser la hauteur du header fixe */
+}
+
+h2 {
+    color: chartreuse;
+}
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1100px;
+}
+
+img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+h5 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #343a40;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+}
+
+.progress-bar {
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Container de l'image */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Assure que l'image couvre toute la hauteur de la fenêtre */
+    overflow: hidden;
+    margin-top: 80px; /* Ajoute une marge pour compenser la hauteur du header */
+}
+
+/* Image de fond */
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'image couvre toute la zone sans déformation */
+    filter: blur(5px); /* Applique un flou à l'image */
+    transition: filter 0.3s ease; /* Transition douce pour l'effet */
+}
+
+/* Effet de zoom au survol */
+.image-container:hover .bg-img {
+    transform: scale(1.1); /* L'image se zoom lorsqu'on survole */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Texte circulant */
+.texte-circulant {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%); /* Centrer verticalement */
+    animation: defiler 20s linear infinite; /* Animation pour faire circuler le texte */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre portée pour le texte */
+}
+
+/* Animation du texte circulant */
+@keyframes defiler {
+    0% {
+        left: 100%;
+    }
+    50% {
+        left: -100%; /* L'image défile complètement */
+    }
+    100% {
+        left: 100%; /* Retour au début de l'animation */
+    }
+}
+
+/* Header fixe avec du padding */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garantir que le header est au-dessus de tout le contenu */
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour le header */
+}
+
+/* Ajoute un padding-top pour le contenu sous le header */
+body {
+    padding-top: 120px; /* Ajuste en fonction de la hauteur de ton header */
+}
+
+/* Footer moderne */
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer .footer-icons {
+    font-size: 2rem;
+}
+
+.footer .footer-icons a {
+    transition: transform 0.3s ease;
+}
+
+.footer .footer-icons a:hover {
+    transform: scale(1.2);
+}
+
+.footer p {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .texte-circulant {
+        font-size: 1.5rem;
+    }
+}
